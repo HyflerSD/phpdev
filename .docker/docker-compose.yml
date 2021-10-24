@@ -1,0 +1,23 @@
+version: '2.1'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: learning-php
+    restart: on-failure
+    working_dir: /var/www
+    volumes:
+      - ../src:/var/www
+      - ./PHP/etc:/usr/local/etc/php
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-con
+    restart: on-failure
+    ports:
+      - "8000:80"
+    volumes:
+      - ../src:/var/www
+      - ./nginx:/etc/nginx/conf.d
+#      - ./nginx/logs:/var/log/nginx/error.log
