@@ -1,5 +1,5 @@
 <?php
-echo 'im here'
+echo 'im here';
 
 echo 'tetsing add'
 ?>
