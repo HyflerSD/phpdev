@@ -1,9 +1,10 @@
 <?php
-echo 'im here';
+declare(strict_types=1);
 
-echo 'tetsing add';
+$root = dirname(__DIR__) . DIRECTORY_SEPARATOR;
+define('APP_PATH', $root . 'app' . DIRECTORY_SEPARATOR);
+define('FILE_PATH', $root . '[TBD]' . DIRECTORY_SEPARATOR);
+define('VIEWS_PATH', $root . '[TBD]' . DIRECTORY_SEPARATOR);
+require_once('../Transaction.php');
 
-function checkoutThis(string $paper): array{
-    return $string = [];
-}
 ?>
