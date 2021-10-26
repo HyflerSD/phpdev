@@ -60,9 +60,4 @@ class Transaction
         // TODO: Implement __destruct() method.
         echo 'Destruct ' .$this->description . '<br/>';
     }
-
-
-
-//fffff
-
 }
